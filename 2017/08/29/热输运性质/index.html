@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="热输运性质," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="热容Cp理论值 低温热容理论表达式(德拜温度以下)[^04-01][^04-02]  $$C_p=\gamma T +b T^{3}$$ $$\begin{align}\gamma &amp;amp;=\frac {\pi^2}{3} k_{B}^{2}N(E_{F}) \\&amp;amp;=1.36 \times 10^{-4} \times V_{mol}^{2/3} n_{\gamma}^{1/3}\fr">
+<meta name="keywords" content="热输运性质">
+<meta property="og:type" content="article">
+<meta property="og:title" content="热输运性质">
+<meta property="og:url" content="https://13skeleton.github.io/2017/08/29/热输运性质/index.html">
+<meta property="og:site_name" content="J.Pei">
+<meta property="og:description" content="热容Cp理论值 低温热容理论表达式(德拜温度以下)[^04-01][^04-02]  $$C_p=\gamma T +b T^{3}$$ $$\begin{align}\gamma &amp;amp;=\frac {\pi^2}{3} k_{B}^{2}N(E_{F}) \\&amp;amp;=1.36 \times 10^{-4} \times V_{mol}^{2/3} n_{\gamma}^{1/3}\fr">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-08-28T22:40:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="热输运性质">
+<meta name="twitter:description" content="热容Cp理论值 低温热容理论表达式(德拜温度以下)[^04-01][^04-02]  $$C_p=\gamma T +b T^{3}$$ $$\begin{align}\gamma &amp;amp;=\frac {\pi^2}{3} k_{B}^{2}N(E_{F}) \\&amp;amp;=1.36 \times 10^{-4} \times V_{mol}^{2/3} n_{\gamma}^{1/3}\fr">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://13skeleton.github.io/2017/08/29/热输运性质/"/>
+
+
+
+
+
+  <title>热输运性质 | J.Pei</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">J.Pei</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">J.Pei的个人博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://13skeleton.github.io/2017/08/29/热输运性质/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="J.Pei">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="J.Pei">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">热输运性质</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-29T06:40:10+08:00">
+                2017-08-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/科研/" itemprop="url" rel="index">
+                    <span itemprop="name">科研</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/科研/热电/" itemprop="url" rel="index">
+                    <span itemprop="name">热电</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/科研/热电/理论/" itemprop="url" rel="index">
+                    <span itemprop="name">理论</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="热容Cp理论值"><a href="#热容Cp理论值" class="headerlink" title="热容Cp理论值"></a>热容Cp理论值</h2><ul>
+<li>低温热容理论表达式(德拜温度以下)[^04-01][^04-02]</li>
+</ul>
+<p>$$C_p=\gamma T +b T^{3}$$</p>
+<p>$$\begin{align}<br>\gamma &amp;=\frac {\pi^2}{3} k_{B}^{2}N(E_{F}) \\<br>&amp;=1.36 \times 10^{-4} \times V_{mol}^{2/3} n_{\gamma}^{1/3}\frac{m^{ * }}{m_{0}}<br>\end{align}$$</p>
+<p>对于低温热容(德拜温度以下)，某些材料符合以上公式，其中$\gamma T$代表电子热容贡献，$\gamma$代表电子热容系数，$bT^{3}$代表晶格贡献，在德拜模型中，$b=12\pi^{4}R_{0}/5\theta_{D}^{3}$，其中$\theta_{D}$代表德拜温度，$R_{0}$代表气体普适常 数，$\gamma$可以通过费米能级出的态密度$N(E_{F})$得到，及有效质量$m^{<em> }$, $V_{mol}$代表摩尔体积，$n_{\gamma}$代表单胞内电子数，$m^{</em> }$代表态密度有效质量。</p>
+<p>通过对$C_p/T$与$T^2$关系作图，可以产生一个直线，当T=0时，直线与曲线键的截距就是$\gamma$值，这样也可以反推得到有效质量$m^{* }$. <a id="more"></a></p>
+<p>[^04-01]: W. Liu, X. Tan, K. Yin, H. Liu, X. Tang, J. Shi, Q. Zhang, and C. Uher, “Convergence of conduction bands as a means of enhancing thermoelectric performance of n-type Mg 2Si 1-xSn x solid solutions,” Phys. Rev. Lett., vol. 108, no. 16, pp. 1–5, 2012.</p>
+<p>[^04-02]: H. Xie, X. Su, G. Zheng, T. Zhu, K. Yin, Y. Yan, C. Uher, M. G. Kanatzidis, and X. Tang, “The Role of Zn in Chalcopyrite CuFeS 2 : Enhanced Thermoelectric Properties of Cu 1- x Zn x FeS 2 with In Situ Nanoprecipitates,” Adv. Energy Mater., p. 1601299, 2016.</p>
+<ul>
+<li>PbTe和SnTe热容拟合值[^04-03]</li>
+</ul>
+<p>$$C_{p}(k_{B}/atom)=3.07+0.00047(T/K-300)$$</p>
+<p>其中,$C_{P}(k_{B}/atom)$代表单胞中每个原子的原子热容，该公式仅适用于PbTe和SnTe.</p>
+<p>[^04-03]: W. Li, L. Zheng, B. Ge, S. Lin, X. Zhang, Z. Chen, Y. Chang, and Y. Pei, “Promoting SnTe as an Eco-Friendly Solution for p-PbTe Thermoelectric via Band Convergence and Interstitial Defects,” Adv. Mater., p. 1605887, 2017.</p>
+<h2 id="德拜温度"><a href="#德拜温度" class="headerlink" title="德拜温度"></a>德拜温度</h2><ul>
+<li>对于各向同性的材料来说[^04-04]</li>
+</ul>
+<p>$$\theta_D=\left( \frac {h}{k_{B}} \right) \left[ \frac{9N}{4\pi V(v_{L}^{-3}+2v_{S}^{-3})}\right]^{1/3}$$<br>其中$\theta_D$代表德拜温度，$h$代表普朗克常量，$k_B$代表玻尔兹曼常数，$N$代表单胞中的原子数目，$V$代表晶胞体积，$v_{L}$代表纵向声速，$v_{S}$代表剪切声速</p>
+<p>[^04-04]: A. Kosuga, M. Uno, K. Kurosaki, and S. Yamanaka, “Thermoelectric properties of Ag1−xPb18SbTe20 (x = 0, 0.1, 0.3),” J. Alloys Compd., vol. 387, no. 1–2, pp. 52–55, 2005.</p>
+<h2 id="热导率的非晶极限"><a href="#热导率的非晶极限" class="headerlink" title="热导率的非晶极限"></a>热导率的非晶极限</h2><ul>
+<li>Cahill公式</li>
+</ul>
+<p>Cahill公式适用的是非晶材料热导率的高温极限(最小热导率不考虑电子热导，仅从晶格热导的角度出发)。</p>
+<ul>
+<li>简化公式[^04-09]</li>
+</ul>
+<p>$$\kappa_{min}=\frac{1}{2}\left(\frac{\pi}{6}\right)^{1/3}k_{B}V^{-2/3}(2v_{t}+v_{l})$$</p>
+<p>其中，$\kappa_{min}$代表热导率的非晶极限, $k_{B}$代表玻尔兹曼常数，$V$代表平均原子体积，$v_{l}$代表纵波声速，$v_{t}$代表横波声速。</p>
+<ul>
+<li>非简化公式[^04-09]</li>
+</ul>
+<p>$$\kappa_{min}=\left(\frac{\pi}{6}\right)^{1/3}k_{B}V^{-2/3}\; \sum_{i}v_{i}\left(\frac{T}{\Theta_{i}}\right)^{2}\int_{0}^{\Theta_{i}/T}\frac{x^{3}e^{x}}{(e^{x}-1)^{2}}dx$$</p>
+<p>其中，$\kappa_{min}$代表热导率的非晶极限, $k_{B}$代表玻尔兹曼常数，$V$代表平均原子体积，$v_{i}$代表纵波声速($v_{l}$)或者横波声速($v_{t}$),$\Theta$代表德拜温度，其中$\Theta_{i}=v_{i}(\hbar/k_{B})(6\pi^{2}/V)^{1/3}$,$v_{i}$代表相应的声速。</p>
+<p>[^04-09]: A. F. May and G. J. Snyder, “Introduction to Modeling Thermoelectric Transport at High Temperatures,” Thermoelectr. Its Energy Harvest., p. 11, 2012.</p>
+<h2 id="callaway模型-04-05"><a href="#callaway模型-04-05" class="headerlink" title="callaway模型[^04-05]"></a>callaway模型[^04-05]</h2><ul>
+<li>callaway模型[^04-05]</li>
+</ul>
+<p>$$\kappa_{l}(\omega)=\frac{k_B}{2\pi^{2}v}(\frac{k_{B}T}{\hbar})^{3}\frac{z^{4}e^{z}}{\tau^{-1}(e^{z}-1)^2}$$</p>
+<p>其中$z=\hbar \omega/k_{B}T$代表简约声子频率，$k_{B}$代表玻尔兹曼常数，$\hbar$代表简约费米能级，$\theta_{D}$代表德拜温度，$v$代表平均声速，$\tau$代表总驰豫时间。</p>
+<p>其中总得弛豫时间$\tau$有如下关系:</p>
+<p>$$\tau^{-1}=A\omega^{4}+B\omega^{2}T \exp (-\theta_{D}/3T)+C \omega^{2}+v/d $$</p>
+<p>其中，$d$代表晶粒尺寸，$v/d$代表晶界散射，$A,B,C$分别代表点缺陷散射，Umklapp过程散射，电子-声子散射的散射因子。</p>
+<p>[^04-05]: Y. Pan and J.-F. Li, “Thermoelectric performance enhancement in n-type Bi2(TeSe)3 alloys owing to nanoscale inhomogeneity combined with a spark plasma-textured microstructure,” NPG Asia Mater., vol. 8, no. 6, p. e275, 2016.k</p>
+<ul>
+<li>Debye 近似</li>
+</ul>
+<p>$$\kappa_{l}(\omega)=\frac{k_B}{2\pi^{2}v}(\frac{k_{B}T}{\hbar})^{3}\int_{0}^{\theta_{D}/T} \frac{z^{4}e^{z}}{\tau_{c}^{-1}(e^{z}-1)^2} dx$$</p>
+<h2 id="Debye-callaway模型-04-06"><a href="#Debye-callaway模型-04-06" class="headerlink" title="Debye-callaway模型[^04-06]"></a>Debye-callaway模型[^04-06]</h2><p>$$\Gamma =x(1-x)\left[\left(\frac{\Delta M}{M}\right)^{2}+\varepsilon \left(\frac{\Delta \delta}{\delta}\right)^2 \right]$$</p>
+<p>$$U^{2}=\left(\frac{\pi^{2}\theta_{D}\Omega}{h \nu^{2}}\right)\kappa_{L}^{pure}\Gamma $$</p>
+<p>$$\kappa_{L}^{cal}=U^{-1} \tan^{-1}(U) \kappa_{L}^{pure} $$</p>
+<p>其中,$\Gamma$代表原子无序性参数，$M$代表平均原子质量，$\Delta M$代表原子质量偏差，$\delta$代表晶格常数，$\varepsilon$代表晶格反谐振参数,$\theta_{D}$代表由声速计算得到的德拜温度,$\Omega$代表平均原子体积,$h$代表普朗克常量,$\nu$代表平均声速,$\kappa_{L}^{pure}$代表不存在点缺陷的晶格热导,$\kappa_{L}^{cal}$代表计算的晶格热导.</p>
+<p>[^04-06]: Y. Pei, L. Zheng, W. Li, S. Lin, Z. Chen, Y. Wang, X. Xu, H. Yu, Y. Chen, and B. Ge, “Interstitial Point Defect Scattering Contributing to High Thermoelectric Performance in SnTe,” Adv. Electron. Mater., 2016.</p>
+<ul>
+<li>klemens’s model</li>
+</ul>
+<h2 id="non-equilibrium-Green’s-function-formalism"><a href="#non-equilibrium-Green’s-function-formalism" class="headerlink" title="non-equilibrium Green’s function formalism"></a>non-equilibrium Green’s function formalism</h2><h2 id="有效介质理论-EMA-复合专用-04-07"><a href="#有效介质理论-EMA-复合专用-04-07" class="headerlink" title="有效介质理论(EMA)(复合专用)[^04-07]"></a>有效介质理论(EMA)(复合专用)[^04-07]</h2><p>$$\kappa^{* }=\kappa_{m} \frac{\kappa_{P}(1+2\alpha)+2\kappa_{m}+2f[\kappa_{P}(1-\alpha)-\kappa_{m}]}{\kappa_{P}(1+2\alpha)+2\kappa_{m}-f[\kappa_{P}(1-\alpha)-\kappa_{m}]}$$</p>
+<p>$$\alpha=\frac{a_{k}}{a}$$</p>
+<p>其中，$\kappa^{* }$代表复合后的材料总热导，$\kappa_{m}$代表基体主相的热导率，$\kappa_{P}$代表球形颗粒的热导率，$f$代表球形颗粒占的体积分数，$a$代表球形颗粒的半径，$a_{k}$代表复合物的Kapitza半径</p>
+<p>根据EMA理论，当分散相的热导率比基体热导率高时，复合材料的热导率主要取决于Kapitza半径与颗粒半径分布的关系，如果颗粒半径小于Kapitza半径，那么复合材料会由于界面热阻而降低热导；如果颗粒半径大于Kapitza半径，高热导的分散颗粒将会起作用，复合物的热导率将会增加，因此EMA理论中的Kapitza半径至关重要。其具体影响因素如下:</p>
+<p>$$a_{k}=R_{Bd}K_{m}; R_{Bd}=\frac{4}{\rho C \nu \eta}$$</p>
+<p>其中，$R_{Bd}$被称为边界热阻，$\rho$代表基体的密度，$C$代表基体的比热，$\nu$代表基体的德拜(debye)速度,$\eta$代表声子穿过界面进入颗粒的平均概率，$\eta$可以用$\eta=pq$表示。其中$p,q$分别表示如下:</p>
+<p>$$q=\frac {1}{2} \sin^{2}\theta_{c} =\frac{1}{2}(\nu /\nu^{‘})^{2} $$</p>
+<p>$$p=\frac{4ZZ^{‘}}{(Z+Z^{‘})^{2}}; Z=p\nu ; Z^{‘}=p^{‘}\nu^{‘}$$</p>
+<p>[^04-07]: H. Xie, X. Su, G. Zheng, T. Zhu, K. Yin, Y. Yan, C. Uher, M. G. Kanatzidis, and X. Tang, “The Role of Zn in Chalcopyrite CuFeS 2 : Enhanced Thermoelectric Properties of Cu 1- x Zn x FeS 2 with In Situ Nanoprecipitates,” Adv. Energy Mater., p. 1601299, 2016.</p>
+<ul>
+<li><p>弛豫时间</p>
+<ul>
+<li>联合弛豫时间[^04-08]</li>
+</ul>
+</li>
+</ul>
+<p>$$\tau_{c}^{-1}=\tau_{U}^{-1}+\tau_{N}^{-1}+\tau_{B}^{-1}+\tau_D^{-1}+\tau_{P}^{-1}+\tau_{S}^{-1} $$</p>
+<p>其中，$\tau_{U}^{-1}$代表Umklapp过程的弛豫时间，$\tau_{N}^{-1}$代表标准声子-声子散射的弛豫时间，$\tau_{B}^{-1}$代表晶界散射的驰豫时间，$\tau_{D}^{-1}$代表位错的弛豫时间，$\tau_{P}^{-1}$代表沉积物的驰豫时间，$\tau_{S}^{-1}$代表应力的弛豫时间。</p>
+<ul>
+<li>Peter Carruthers简化的弹性应力场的驰豫时间[^04-08]</li>
+</ul>
+<p>$$\tau_{S}^{-1} = \frac {1}{4} \sigma (\frac {gA^{‘}} { \rho } )^{2} (\frac {q^2}{v^3})=\frac{144\sigma \gamma^{2}\varepsilon^{2}r_{0}^{4}}{v}\omega^{2}$$</p>
+<p>其中$g=24 \gamma \rho v^{2}$，$A^{‘}=\varepsilon r_{0}^{2}$，$q=(\omega)/(v)$，$\rho$代表晶体密度，$\sigma$代表散射密度，$r_{0}$代表球形半径，$\varepsilon$代表球形杂质与基体间的错配度，其表达式如下</p>
+<p>$$\varepsilon=\varepsilon_{0}+<a href="T-300">\alpha_{P}-\alpha_{M}(1-\varepsilon_{0})</a>$$</p>
+<p>$\varepsilon_{0}$代表室温300K时的错配度，可以通过TEM照片获得。$\alpha_{P}$代表纳米沉积物的热膨胀系数，$\alpha_{M}$代表基体的热膨胀系数</p>
+<p>[^04-08]: J. He, J. R. Sootsman, S. N. Girard, J.-C. Zheng, J. Wen, Y. Zhu, M. G. Kanatzidis, and V. P. Dravid, “On the Origin of Increased Phonon Scattering in Nanostructured PbTe Based Thermoelectric Materials,” no. 14, pp. 8669–8675, 2010.</p>
+<h2 id="密度"><a href="#密度" class="headerlink" title="密度"></a>密度</h2><h3 id="密度的测试原理"><a href="#密度的测试原理" class="headerlink" title="密度的测试原理"></a>密度的测试原理</h3><h3 id="密度与热膨胀系数，温度的关系"><a href="#密度与热膨胀系数，温度的关系" class="headerlink" title="密度与热膨胀系数，温度的关系"></a>密度与热膨胀系数，温度的关系</h3><p>$$d=\frac{d_{300K}}{1+3a(T-300)}$$</p>
+<p>其中，$d$代表密度，$d_{300K}$代表室温密度，$a$代表线膨胀系数，$T$代表开尔文温度。(<em>本公式参考王衡师兄博士论文</em>)</p>
+<p><strong>参考文献</strong></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="J.Pei 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/热输运性质/" rel="tag"># 热输运性质</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/26/XRD总结/" rel="next" title="XRD总结">
+                <i class="fa fa-chevron-left"></i> XRD总结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/29/DFT计算/" rel="prev" title="DFT计算">
+                DFT计算 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="J.Pei" />
+            
+              <p class="site-author-name" itemprop="name">J.Pei</p>
+              <p class="site-description motion-element" itemprop="description">欢迎来到J.Pei的个人博客</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/13skeleton" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:J.Pei@foxmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="skype:J.Pei@foxmail.com?call|chat" target="_blank" title="Skype">
+                      
+                        <i class="fa fa-fw fa-skype"></i>Skype</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#热容Cp理论值"><span class="nav-number">1.</span> <span class="nav-text">热容Cp理论值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#德拜温度"><span class="nav-number">2.</span> <span class="nav-text">德拜温度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#热导率的非晶极限"><span class="nav-number">3.</span> <span class="nav-text">热导率的非晶极限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#callaway模型-04-05"><span class="nav-number">4.</span> <span class="nav-text">callaway模型[^04-05]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Debye-callaway模型-04-06"><span class="nav-number">5.</span> <span class="nav-text">Debye-callaway模型[^04-06]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#non-equilibrium-Green’s-function-formalism"><span class="nav-number">6.</span> <span class="nav-text">non-equilibrium Green’s function formalism</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有效介质理论-EMA-复合专用-04-07"><span class="nav-number">7.</span> <span class="nav-text">有效介质理论(EMA)(复合专用)[^04-07]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#密度"><span class="nav-number">8.</span> <span class="nav-text">密度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#密度的测试原理"><span class="nav-number">8.1.</span> <span class="nav-text">密度的测试原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#密度与热膨胀系数，温度的关系"><span class="nav-number">8.2.</span> <span class="nav-text">密度与热膨胀系数，温度的关系</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">J.Pei</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
